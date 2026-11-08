@@ -10,11 +10,21 @@
 
 import { ServiceItem } from '../types';
 
-export const HERO_IMAGE = '/src/assets/images/hero_lumiere_studio_1794122677532.jpg';
-export const FACIAL_IMAGE = '/src/assets/images/treatment_facial_glow_1794122676640.jpg';
-export const HAIR_IMAGE = '/src/assets/images/treatment_hair_couture_1794122677170.jpg';
-export const MAKEUP_IMAGE = '/src/assets/images/gallery_editorial_makeup_1794122677367.jpg';
-export const FOUNDER_IMAGE = '/src/assets/images/founder_master_esthetician_1794122677341.jpg';
+export const HERO_IMAGE = '/images/salon-hero.jpg';
+export const FACIAL_IMAGE = '/images/facial-glow.jpg';
+export const HAIR_IMAGE = '/images/hair-couture.jpg';
+export const MAKEUP_IMAGE = '/images/editorial-makeup.jpg';
+export const FOUNDER_IMAGE = '/images/founder-esthetician.jpg';
+
+// Specialized public image paths
+export const BROWS_IMAGE = '/images/treatment-brows.jpg';
+export const BRIDAL_IMAGE = '/images/treatment-bridal.jpg';
+export const MASSAGE_IMAGE = '/images/treatment-massage.jpg';
+export const SPECIALIST_JULIEN_IMAGE = '/images/specialist-julien.jpg';
+export const SPECIALIST_AMARA_IMAGE = '/images/specialist-amara.jpg';
+export const SPECIALIST_CAMILLE_IMAGE = '/images/specialist-camille.jpg';
+export const BEFORE_FACIAL_IMAGE = '/images/before-facial.jpg';
+export const BEFORE_HAIR_IMAGE = '/images/before-hair.jpg';
 
 export interface StudioLocation {
   id: string;
@@ -208,7 +218,7 @@ export const SALON_CONFIG: SalonConfiguration = {
       shortDesc: 'Golden ratio facial mapping, organic keratin lamination, gentle wax precision shaping, and custom-blended mineral tinting.',
       fullDesc: 'Elevate your natural eye geometry. We map brows according to unique cranial bone structure, groom unruly hairs with a gentle keratin conditioning balm, shape using organic pine resin wax, and apply a multidimensional mineral dye that stays vibrant for up to 6 weeks.',
       keyBotanicals: ['Plant Keratin', 'Castor Seed Oil', 'Organic Aloe Leaf', 'Mineral Pigment Infusion'],
-      image: MAKEUP_IMAGE,
+      image: BROWS_IMAGE,
       popular: true,
     },
     {
@@ -231,7 +241,7 @@ export const SALON_CONFIG: SalonConfiguration = {
       shortDesc: 'Warm almond milk soak, sugar exfoliation, warm paraffin hydration, cuticles groomed, and breathable 10-free polish.',
       fullDesc: 'Indulge tired hands and feet in a soothing warm sweet almond milk bath with dried calendula flowers. Includes organic raw cane sugar scrub, deep tension massage, nourishing warm beeswax wrap, and non-toxic high-shine breathable lacquer.',
       keyBotanicals: ['Sweet Almond Milk', 'Calendula Petals', 'Raw Shea Butter', 'Bergamot Essential Oil'],
-      image: HERO_IMAGE,
+      image: MASSAGE_IMAGE,
     },
     {
       id: 'bridal-couture-preview',
@@ -242,7 +252,7 @@ export const SALON_CONFIG: SalonConfiguration = {
       shortDesc: 'Comprehensive skin analysis, custom veil and gown harmony study, bespoke trial makeup, and hair sculpture test.',
       fullDesc: 'Our dedicated bridal director curates a private atelier suite session to design an enduring wedding-day look. Includes a customized hydration veil preparation, high-definition camera testing under both natural daylight and reception evening candlelight, and a tailored timeline for pre-wedding rituals.',
       keyBotanicals: ['White Truffle Extract', 'Neroli Blossom Water', 'Centella Asiatica', 'Pearl Micro-Reflectors'],
-      image: MAKEUP_IMAGE,
+      image: BRIDAL_IMAGE,
       popular: true,
     },
   ],
