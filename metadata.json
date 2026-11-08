@@ -1,0 +1,6 @@
+{
+  "name": "Lumière Beauty Studio",
+  "description": "Luxury aesthetics, couture hair design, bespoke facial therapies, and bridal artistry at Lumière Beauty Studio.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

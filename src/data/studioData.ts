@@ -1,0 +1,155 @@
+import { Specialist, GalleryItem } from '../types';
+import {
+  SALON_CONFIG,
+  HERO_IMAGE,
+  FACIAL_IMAGE,
+  HAIR_IMAGE,
+  MAKEUP_IMAGE,
+  FOUNDER_IMAGE,
+} from '../config/salonConfig';
+
+export { HERO_IMAGE, FACIAL_IMAGE, HAIR_IMAGE, MAKEUP_IMAGE, FOUNDER_IMAGE };
+
+// Re-export services, addons, and locations directly from centralized salonConfig
+export const SERVICES = SALON_CONFIG.services;
+export const ADDONS = SALON_CONFIG.addons;
+export const STUDIO_LOCATIONS = SALON_CONFIG.locations;
+
+export const SPECIALISTS: Specialist[] = [
+  {
+    id: 'helene-laurent',
+    name: 'Hélène Laurent',
+    role: 'Founder & Master Esthetician',
+    experienceYears: 16,
+    bio: 'Trained in cellular dermal therapies at the Université de Paris. Hélène pioneered the Lumière Circadian Infusion protocol to restore radiant epidermal vitality through bio-identical botanicals and manual sculptural lift.',
+    specialties: ['Cellular Facial Resurfacing', 'Sculptural Buccal Lifting', 'Circadian Skin Analysis'],
+    image: FOUNDER_IMAGE,
+    availableDays: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+  },
+  {
+    id: 'julien-moreau',
+    name: 'Julien Moreau',
+    role: 'Creative Hair Director',
+    experienceYears: 14,
+    bio: 'Former lead colorist for Paris Haute Couture runways. Julien specializes in hand-painted French balayage, dimensional brunette contouring, and silk keratin glass finishes that honor natural hair movement.',
+    specialties: ['French Balayage', 'Couture Precision Cutting', 'Silk Protein Infusion'],
+    image: HAIR_IMAGE,
+    availableDays: ['Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+  },
+  {
+    id: 'amara-vance',
+    name: 'Amara Vance',
+    role: 'Brow & Lash Architect',
+    experienceYears: 9,
+    bio: 'Celebrated for featherweight precision and architectural brow mapping. Amara custom-blends organic keratin lamination and micro-feather tinting tailored to bone structure.',
+    specialties: ['Keratin Brow Lamination', 'Silk Lash Elevation', 'Feather Micro-Sculpting'],
+    image: MAKEUP_IMAGE,
+    availableDays: ['Monday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+  },
+  {
+    id: 'camille-blanc',
+    name: 'Camille Blanc',
+    role: 'Holistic Body & Lymphatic Specialist',
+    experienceYears: 12,
+    bio: 'Practitioner of classical Vodder lymphatic drainage and deep neuromuscular tension release. Camille combines warm volcanic basalt stones with wild arnica and lavender oils.',
+    specialties: ['Vodder Lymphatic Sculpting', 'Sensory Aromatherapy Immersion', 'Cranial Tension Release'],
+    image: FACIAL_IMAGE,
+    availableDays: ['Monday', 'Tuesday', 'Thursday', 'Friday', 'Sunday'],
+  },
+];
+
+export const GALLERY_ITEMS: GalleryItem[] = [
+  {
+    id: 'gal-1',
+    title: 'The Dewy Glass Skin Awakening',
+    category: 'skin',
+    image: FACIAL_IMAGE,
+    beforeImage: FACIAL_IMAGE,
+    description: 'A client with dry seasonal fatigue restored to optimal epidermal luminosity through the Grand Cru Cellular Facial.',
+    specialistId: 'helene-laurent',
+    specialistName: 'Hélène Laurent',
+    serviceId: 'grand-cru-facial',
+    serviceName: 'Grand Cru Cellular Radiance Facial',
+    productsUsed: ['Alpine Edelweiss Nectar', 'Liposomal Niacinamide', 'Hyaluronic Tri-Molecule'],
+  },
+  {
+    id: 'gal-2',
+    title: 'Dimensional Chestnut Couture Balayage',
+    category: 'hair',
+    image: HAIR_IMAGE,
+    beforeImage: HAIR_IMAGE,
+    description: 'Seamless sun-touched hand painting over deep espresso base, finished with an acidic silk gloss that bounces natural light.',
+    specialistId: 'julien-moreau',
+    specialistName: 'Julien Moreau',
+    serviceId: 'couture-balayage',
+    serviceName: 'Atelier French Balayage & Silk Gloss',
+    productsUsed: ['Ammonia-Free Clay Lightener', 'Vegetable Keratin Glaze', 'Organic Argan Elixir'],
+  },
+  {
+    id: 'gal-3',
+    title: 'Architectural Feathered Brow & Lash Lift',
+    category: 'brows-lashes',
+    image: MAKEUP_IMAGE,
+    description: 'Restructured natural brow growth pattern with bio-keratin lamination and midnight lash elevation for an effortless open gaze.',
+    specialistId: 'amara-vance',
+    specialistName: 'Amara Vance',
+    serviceId: 'keratin-brow-architecture',
+    serviceName: 'Feathered Brow Architecture & Tint',
+    productsUsed: ['Plant Keratin Balm', 'Cold-Pressed Castor Serum', 'Custom Ash Brunette Mineral Tint'],
+  },
+  {
+    id: 'gal-4',
+    title: 'Sanctuary Interior: Travertine & Arched Light',
+    category: 'sanctuary',
+    image: HERO_IMAGE,
+    description: 'Our Madison Avenue flagship sanctuary, envisioned as a calm oasis of organic textures, muted earth tones, and acoustic stillness.',
+    specialistId: 'helene-laurent',
+    specialistName: 'Hélène Laurent',
+    serviceId: 'grand-cru-facial',
+    serviceName: 'The Lumière Atelier Experience',
+    productsUsed: ['Acoustic Linen Draping', 'Natural Travertine Stone', 'Cold Mist Diffused Neroli'],
+  },
+  {
+    id: 'gal-5',
+    title: 'Ethereal Radiant Bridal Glow',
+    category: 'bridal',
+    image: MAKEUP_IMAGE,
+    description: 'Weightless skin-first bridal makeup with champagne micro-highlighters designed to hold from afternoon portraits to late-night dancing.',
+    specialistId: 'helene-laurent',
+    specialistName: 'Hélène Laurent',
+    serviceId: 'bridal-couture-preview',
+    serviceName: 'Bridal Haute Artistry Consultation',
+    productsUsed: ['White Truffle Primer', 'Silk Veil Foundation', 'Rosehip Mineral Blush'],
+  },
+  {
+    id: 'gal-6',
+    title: 'Sculpted Jawline & Cryogenic Lift',
+    category: 'skin',
+    image: FACIAL_IMAGE,
+    description: 'Buccal intra-oral release combined with sub-zero cryo wand sculpts cheekbones and drains fluid retention.',
+    specialistId: 'camille-blanc',
+    specialistName: 'Camille Blanc',
+    serviceId: 'grand-cru-facial',
+    serviceName: 'Grand Cru Cellular Radiance Facial',
+    productsUsed: ['Arnica Dermal Salve', 'Marine Peptide Cryo Gel', 'Pure Rose Quartz'],
+  },
+];
+
+// Verified Studio Quality Standards & Guarantees (No invented reviews)
+export const ATELIER_STANDARDS = [
+  {
+    title: 'Hospital-Grade Sterilisation',
+    description: 'Every metal tool undergoes medical-grade autoclave sterilization. All suites utilize active continuous HEPA-14 viral air purification.',
+    badge: 'Hygiene Guarantee',
+  },
+  {
+    title: '100% Certified Clean Formulations',
+    description: 'No synthetic silicones, sulfates, parabens, or aggressive artificial perfumes. Only cold-pressed botanicals and biocompatible peptides.',
+    badge: 'Clinical Formulation',
+  },
+  {
+    title: 'Unhurried Diagnostic Opening',
+    description: 'Every appointment begins with an in-depth 15-minute diagnostic skin or hair assessment over seasonal botanical tea.',
+    badge: 'Bespoke Care',
+  },
+];
